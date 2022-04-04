@@ -1,4 +1,8 @@
 import time
+import os
+import cv2
+import numpy as np
+import pygame
 
 """
 Replace following with your own algorithm logic
@@ -8,7 +12,6 @@ Manual mode where you can use your mouse as also been added for testing purposes
 """
 def GetLocation(move_type, env, current_frame):
     time.sleep(1) #artificial one second processing time
-    
     #Use relative coordinates to the current position of the "gun", defined as an integer below
     if move_type == "relative":
         """
@@ -31,6 +34,7 @@ def GetLocation(move_type, env, current_frame):
         Bottom right = (W, H) 
         """
         coordinate = env.action_space_abs.sample()
-    
+    # print("Looking at: ", pygame.mouse.get_pos())
+    # return coords
     return [{'coordinate' : coordinate, 'move_type' : move_type}]
 
