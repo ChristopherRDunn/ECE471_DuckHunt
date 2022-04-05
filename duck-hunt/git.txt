@@ -1,0 +1,9 @@
+REPO: https://github.com/ChristopherRDunn/ECE471_DuckHunt/tree/templateMatching
+
+Execution instructions:
+    Please run the below commandes before running run_levels.sh, beware the first one is about 2GB
+
+pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+pip install git+https://github.com/facebookresearch/fvcore.git
+git clone https://github.com/facebookresearch/detectron2 detectron2_repo/
+pip install -e detectron2_repo
